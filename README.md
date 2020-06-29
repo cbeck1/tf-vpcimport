@@ -22,16 +22,16 @@ A VPC will be provisioned in AWS and the VPC ID will be included in Terraform ou
 If you did not capture the VPC and need to display the output again using the following command:
 `terraform output -json | jq '.vpcid["value"]'`
 
-## Setup a workspace in TFE/TFE
+## Setup a workspace in Terraform Enterprise
 
-If you have not previously setup a credentials file or set a TFE/TFC token, we can login and setup a token.
+If you have not previously setup a credentials file or set a Terraform Enterprise token, we can login and setup a token.
 
 `terraform login hostname`
 
-This will walk through the authentication process against TFE to generate a user token.
+This will walk through the authentication process against Terraform Enterprise to generate a user token.
 The API token will be saved locally in credentials.tfrc.json and Terraform will read from this file when it requires a token.
 
-Once authenticated we will now configure a workspace in TFE/TFC where we will import the VPC state.
+Once authenticated we will now configure a workspace in Terraform Enterprise where we will import the VPC state.
 
 ```
 cd ..
